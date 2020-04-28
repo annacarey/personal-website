@@ -24,7 +24,7 @@ function About(props) {
 </Email>
             </AboutText>
         </AboutSection>
-        <Quote>"To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote>
+        <Quote> "To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote>
         </Page>
     </Wrapper>
     )
