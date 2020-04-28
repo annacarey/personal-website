@@ -20,13 +20,16 @@ export default MenuBar
 const Wrapper = styled.div`
     display: flex;
     padding: 20px;
-    justify-content: space-around;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-size: 12px;
 `
 
 const InternalLink = styled(NavLink)`
     color: black;
     padding: 0px;
     text-decoration: none;
+    padding-right: 20px;
     &:visited {
         color: black;
     }
@@ -38,6 +41,7 @@ const InternalLink = styled(NavLink)`
 const ExternalLink = styled.a`
     color: black;
     padding: 0px;
+    padding-right: 20px;
     text-decoration: none;
     &:visited {
         color: black;

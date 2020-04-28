@@ -16,7 +16,7 @@ function About(props) {
                 <Greeting>Hi, I'm Anna!</Greeting>
                 I'm a full-stack software engineer with a background in communications and art. 
                 <br /> <br />
-                I believe software has the power to solve real world problems, so I'm looking to join a team of builders who are tackling something big.
+                Software has the power to solve real world problems, so I'm looking to join a team of builders who are tackling something big.
                 <br /> <br />
                 My programming experience includes JavaScript, React, Ruby, Rails, Redux, SQL, Sinatra, ActiveRecord, Git, HTML, CSS, and APIs such as Twilio, Google Natural Language Processing, and Google Geocoding.
                 <br /> <br />
@@ -24,8 +24,9 @@ function About(props) {
 </Email>
             </AboutText>
         </AboutSection>
-        <Quote> "To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote>
         </Page>
+        <Quote> "To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote>
+
     </Wrapper>
     )
 }
@@ -37,11 +38,12 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: #bdb4d8;
 `
 
 const Page = styled.div`
-    padding-top: 30px;
     display: flex;
     flex-direction: column;
 
@@ -53,13 +55,15 @@ const Img = styled.img`
     border-radius: 20px;
 `
 const AboutText = styled.div`
-    padding: 20px;
-    padding-top: 0px;
     font-size: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
 `
 
 const ImageDiv = styled.div`
@@ -76,12 +80,18 @@ const Greeting = styled.div`
 
 const AboutSection = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
 `
 
 const Quote = styled.div`
     margin: 0px;
     padding: 20px;
     align-self: flex-end;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
 
 const By = styled.div`
