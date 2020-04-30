@@ -43,6 +43,8 @@ const Wrapper = styled.div`
 const Text = styled.h3`
   margin: 0;
   font-size: 25px;
+  z-index: 2;
+  color: white;
 `
 
 const BottomNav = styled.div`
@@ -71,6 +73,8 @@ const SquareNav = styled.div`
     width: 22vw;
     cursor: pointer;
     display: flex;
+    background-color: black;
+    z-index: -1;
     align-items: center;
     justify-content: center;
     flex: 1;
@@ -81,7 +85,7 @@ const SquareNav = styled.div`
       margin-top: 1.5%;
     }
     &:before {
-      opacity: 0.4;
+      opacity: 0.7;
       background-image: ${props => `url(${props.img})`} ;
       background-repeat: no-repeat;
       background-size: cover;
@@ -89,7 +93,7 @@ const SquareNav = styled.div`
       content: "";
       width: 22vw;
       height: 22vw;
-      z-index: -2;
+      z-index: 1;
       @media (max-width: 400px) {
         height: 44vw;
         width: 44vw;
@@ -106,8 +110,9 @@ const MainImageDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  &:before {
+  background-color: black;
+  z-index: -1;
+  &:after {
     opacity: 0.6;
     background-image: url(${jamesturrell}) ;
     background-repeat: no-repeat;
@@ -116,14 +121,17 @@ const MainImageDiv = styled.div`
     content: "";
     width: 100%;
     height: 50vh;
-    z-index: -2;
+    z-index: 1;
     position: absolute;
+
   }
 `
 const Tagline = styled.h3`
   font-size: 20px;
   margin: 0px;
+  color: white;
   text-align: center;
   width: 100%;
+  z-index: 2;
 `
 // blue color #011ad8

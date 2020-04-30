@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import MenuBar from './MenuBar'
 import headshot from '../resources/images/headshot.jpeg'
 import headshot2 from '../resources/images/headshot2.jpg'
 import Header from './Header'
@@ -60,7 +59,6 @@ const Wrapper = styled.div`
     height: 100%;
     min-width: 100vw;
     min-height: 100vh;
-    
 `
 const AboutSection = styled.div`
     display: flex;
