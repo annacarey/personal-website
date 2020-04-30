@@ -1,17 +1,30 @@
 import React from 'react';
 import styled from 'styled-components'
-import jt6 from '../resources/images/jt6.jpg'
-import MenuBar from './MenuBar'
+import jamesturrell from '../resources/images/jamesturrell.jpeg'
+import github from '../resources/images/github.png'
+import portfolio from '../resources/images/portfolio.jpg'
+import resume from '../resources/images/resume.jpg'
+import about from '../resources/images/about.jpg'
+import Header from './Header'
+import {NavLink, Link} from "react-router-dom";
 
 function Welcome() {
   return (
     <Wrapper>
-        
-      <MenuBar />
-      <ContentWrapper>
-            <Header>Anna Carey</Header>
-            <p>Full-stack software engineer passionate about the intersection of technology and art.</p>
-        </ContentWrapper>
+      <Header />
+      <MainImageDiv>
+        <Tagline>Full-stack software engineer at the intersection of technology and art.</Tagline>
+      </MainImageDiv>
+      <BottomNav>
+          <Row>
+            <Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>Portfolio</Text></SquareNav></Link>
+            <Link to="/about" exact><SquareNav img = {about}><Text>About</Text></SquareNav></Link>
+          </Row>
+          <Row>
+            <a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" target="_blank"><SquareNav img = {resume}><Text>Resume</Text></SquareNav></a>
+            <a href="https://github.com/annacarey" target="_blank"><SquareNav img = {github}><Text>Github</Text></SquareNav></a>
+          </Row>
+      </BottomNav>
     </Wrapper>
   );
 }
@@ -25,22 +38,92 @@ const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(${jt6}) ;
-  background-repeat: no-repeat;
-  background-size: cover;
-`
-const Header = styled.h1`
-    font-size: 80px;
-    margin: 0px;
-    text-align: center;
-`
-const ContentWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-    padding-left: 20px;
-    padding-right: 20px;
 `
 
+const Text = styled.h3`
+  margin: 0;
+  font-size: 25px;
+`
+
+const BottomNav = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+`
+const Row = styled.div`
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    flex: 1;
+    flex-wrap: wrap;
+    @media (max-width: 400px) {
+      display: block;
+      margin-bottom: -1%;
+    }
+`
+const SquareNav = styled.div`
+    height: 22vw;
+    width: 22vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 3%;
+    @media (max-width: 400px) {
+      height: 44vw;
+      width: 44vw;
+      margin-top: 1.5%;
+    }
+    &:before {
+      opacity: 0.4;
+      background-image: ${props => `url(${props.img})`} ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      content: "";
+      width: 22vw;
+      height: 22vw;
+      z-index: -2;
+      @media (max-width: 400px) {
+        height: 44vw;
+        width: 44vw;
+      }
+      position: absolute;
+    }
+`
+
+
+
+const MainImageDiv = styled.div`
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:before {
+    opacity: 0.6;
+    background-image: url(${jamesturrell}) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    z-index: -2;
+    position: absolute;
+  }
+`
+const Tagline = styled.h3`
+  font-size: 20px;
+  margin: 0px;
+  text-align: center;
+  width: 100%;
+`
+// blue color #011ad8
