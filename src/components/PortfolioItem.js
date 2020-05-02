@@ -14,7 +14,7 @@ function PortfolioItem(props) {
                 <HeroImage position={project.image.position} imageURL= {project.image.imageURL}></HeroImage>
                 <MainInfo>
                     <Introduction>
-                        <TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name}</Title></TitleContainer>
+                        <TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name.toUpperCase()}</Title></TitleContainer>
                         <P>{project.longDescription}</P>
                         <VideoContainer>
                             <Iframe url={project.demoVideo}
