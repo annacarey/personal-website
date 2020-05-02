@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
-import MenuBar from './MenuBar'
+import PortfolioItem from './PortfolioItem'
+import projectInfo from '../resources/ProjectInfo'
 import Header from './Header'
 import github from '../resources/images/github.png'
 import portfolio from '../resources/images/portfolio.jpg'
+import bestie from '../resources/images/bestie.jpg'
 import resume from '../resources/images/resume.jpg'
-import about from '../resources/images/about.jpg'
-import {NavLink, Link} from "react-router-dom";
+import painterly from '../resources/images/painterly.png'
+import graffitti from '../resources/images/graffitti.jpg'
+
+import {NavLink, Link, Switch, Route} from "react-router-dom";
 
 
 function Portfolio(props) {
@@ -14,19 +18,26 @@ function Portfolio(props) {
     return (
     <Wrapper>
         <Header />
-        <div>Work in progress...</div>
+        <div>Portfolio: work in progress...</div>
         <Page>
             <Row>
-                <Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></Link>
-                <Link to="/about" exact><SquareNav img = {about}><Text>Painterly</Text></SquareNav></Link>
-                <Link to="/about" exact><SquareNav img = {about}><Text>Bestie</Text></SquareNav></Link>
+                <Link to="/DreamScore" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></Link>
+                <Link to="/Painterly" exact><SquareNav img = {painterly}><Text>Painterly</Text></SquareNav></Link>
+                <Link to="/Bestie" exact><SquareNav img = {bestie}><Text>Bestie</Text></SquareNav></Link>
             </Row>
             <Row>
                 <a href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {github}><Text>Writing</Text></SquareNav></a>
-                <Link to="/about" exact><SquareNav img = {about}><Text>Grafftti the Internet</Text></SquareNav></Link>
+                <Link to="/about" exact><SquareNav img = {graffitti}><Text>Grafftti the Internet</Text></SquareNav></Link>
                 <a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" target="_blank"><SquareNav img = {resume}><Text>Processing Art</Text></SquareNav></a>
             </Row>
         </Page>
+        <Switch>
+            {projectInfo.map(project => {
+                const slug = project.name
+                console.log(slug)
+                return <Route exact path = {`/${slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
+            })}
+        </Switch>
     </Wrapper>
     )
 }
