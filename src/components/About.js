@@ -79,13 +79,13 @@ const Page = styled.div`
 `
 const Email = styled.h3`
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
 `
 const Img = styled.img`
-    width: 200px;
+    width: 260px;
 `
 const AboutText = styled.div`
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     min-width: 290px;
     flex-direction: column;
@@ -118,6 +118,7 @@ const QuoteWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2%;
     flex-grow: 1;
     @media (max-width: 400px) {
         padding: 30px;

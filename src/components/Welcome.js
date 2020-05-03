@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 
 const Text = styled.h3`
   margin: 0;
-  font-size: 25px;
+  font-size: 20px;
   z-index: 2;
   color: white;
 `
@@ -54,7 +54,7 @@ const BottomNav = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1.5%;
+    margin-top: 3%;
     margin-bottom: 1.5%;
 `
 const Row = styled.div`

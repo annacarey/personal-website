@@ -16,14 +16,6 @@ function PortfolioItem(props) {
                     <Introduction>
                         <TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name.toUpperCase()}</Title></TitleContainer>
                         <P>{project.longDescription}</P>
-                        {project.demoVideo === ""? "" :
-                        <VideoContainer>
-                            <Iframe url={project.demoVideo}
-                                width="100%"
-                                height= '100%'
-                                position='absolute'
-                                />
-                        </VideoContainer>}
                     </Introduction>
                     <InfoBox>
                         <Table>
@@ -52,8 +44,15 @@ function PortfolioItem(props) {
                                 <TD>{project.technologies}</TD>
                             </TR>
                         </Table>
-                        
                     </InfoBox>
+                    {project.demoVideo === ""? "" :
+                        <VideoContainer>
+                            <Iframe url={project.demoVideo}
+                                width="100%"
+                                height= '100%'
+                                position='absolute'
+                                />
+                        </VideoContainer>}
                 </MainInfo>
             </Page>
             
@@ -98,10 +97,9 @@ const Page = styled.div`
     flex-direction: column;
 `
 
-
 const HeroImage = styled.a`
     display: flex;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     background-image: ${props => `url(${props.imageURL})`};
     background-repeat: no-repeat;
@@ -113,16 +111,18 @@ const HeroImage = styled.a`
 `
 const MainInfo = styled.div`
     display: flex;
+    flex-direction: column;
     padding-bottom: 5%;
-    box-sizing: content-box;
-    @media (max-width: 400px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    @media (max-width: 620px) {
-        flex-wrap: wrap;
-    }
+    justify-content: center;
+    // box-sizing: content-box;
+    // @media (max-width: 400px) {
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+    // @media (max-width: 620px) {
+    //     flex-wrap: wrap;
+    // }
 `
 
 const Introduction = styled.div`
@@ -141,8 +141,9 @@ const Introduction = styled.div`
 const VideoContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-self: center;
     height: 0px;
-    width: 90%;
+    width: 80%;
     padding-bottom: 56.25%;
     position: relative;
     @media (max-width: 400px) {
@@ -152,9 +153,12 @@ const VideoContainer = styled.div`
 
 const InfoBox = styled.div`
     background-color: #ededed;
+    width: 80%;
+    align-self: center;
     padding: 3%;
     font-size: 12px;
     height: 100%;
+    margin-bottom: 3%;
     box-sizing: border-box;
     @media (max-width: 400px) {
         width: 86%;
@@ -171,7 +175,7 @@ const Title = styled.h3`
 `
 
 const TitleContainer = styled.a`
-    width: 90%;
+    width: 80%;
     padding-bottom: 20px;
     text-align: center;
 `
@@ -179,6 +183,5 @@ const TitleContainer = styled.a`
 const P = styled.p`
     margin: 0px;
     font-size: 12px;
-    width: 90%;
-    padding-bottom: 6%;
+    width: 80%;
 `

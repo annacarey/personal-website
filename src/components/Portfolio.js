@@ -21,14 +21,14 @@ function Portfolio(props) {
         <Header />
         <Page>
             <Row>
-                <Link to="/DreamScore" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></Link>
-                <Link to="/Painterly" exact><SquareNav img = {painterly}><Text>Painterly</Text></SquareNav></Link>
-                <Link to="/Bestie" exact><SquareNav img = {bestie}><Text>Bestie</Text></SquareNav></Link>
+                <StyledLink to="/DreamScore" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></StyledLink>
+                <StyledLink to="/Painterly" exact><SquareNav img = {painterly}><Text>Painterly</Text></SquareNav></StyledLink>
+                <StyledLink to="/Bestie" exact><SquareNav img = {bestie}><Text>Bestie</Text></SquareNav></StyledLink>
             </Row>
             <Row>
-                <a href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {github}><Text>Writing</Text></SquareNav></a>
-                <Link to="/about" exact><SquareNav img = {graffitti}><Text>Graffitti the Internet</Text></SquareNav></Link>
-                <Link to="/Processing%20Sketches"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></Link>
+                <StyledA href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {github}><Text>Writing</Text></SquareNav></StyledA>
+                <StyledLink to="/about" exact><SquareNav img = {graffitti}><Text>Graffitti the Internet</Text></SquareNav></StyledLink>
+                <StyledLink to="/Processing%20Sketches"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
             </Row>
         </Page>
         <Switch>
@@ -62,13 +62,12 @@ const Page = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-top: 1.5%;
-    margin-bottom: 1.5%;
     align-items: center;
 `
 
 const Text = styled.h3`
   margin: 0;
-  font-size: 25px;
+  font-size: 20px;
   z-index: 2;
   color: white;
   text-align: center;
@@ -77,9 +76,9 @@ const Text = styled.h3`
 const Row = styled.div`
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
     flex: 1;
     flex-wrap: wrap;
+    justify-content: center;
     @media (max-width: 400px) {
       flex-direction: column;
       align-items: center;
@@ -98,8 +97,8 @@ const SquareNav = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1;
-    margin: 3%;
-    margin-bottom: 10%;
+    // margin: 3%;
+    // margin-bottom: 10%;
     @media (max-width: 400px) {
       height: 44vw;
       width: 44vw;
@@ -123,4 +122,14 @@ const SquareNav = styled.div`
       }
       position: absolute;
     }
+`
+
+const StyledLink = styled(Link)`
+    margin: 1.5%;
+
+`
+
+const StyledA = styled.a`
+    margin: 1.5%;
+
 `
