@@ -20,7 +20,7 @@ const projectInfo = [
     {id:2,
     name: "Painterly",
     shortDescription: "Your personal dream journal that reflects the mood beneath your subconscious",
-    websiteURL: "https://painterly-app.herokuapp.com//",
+    websiteURL: "https://painterly-app.herokuapp.com/",
     longDescription: "Painterly is an application that aims to unleash your creativity by allowing you to create digital paintings using your computer mouse and save them to your profile and to a public gallery. You can also save paintings to collections.",
     technologies: "React, Ruby on Rails, ActiveRecord, Memoization, PostgreSQL, Heroku, Bcrypt, Styled Components, Flexbox",
     github: {
