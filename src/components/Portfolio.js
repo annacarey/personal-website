@@ -8,6 +8,7 @@ import portfolio from '../resources/images/portfolio.jpg'
 import bestie from '../resources/images/bestie.jpg'
 import resume from '../resources/images/resume.jpg'
 import painterly from '../resources/images/painterly.png'
+import processing from '../resources/images/processing.png'
 import graffitti from '../resources/images/graffitti.jpg'
 
 import {NavLink, Link, Switch, Route} from "react-router-dom";
@@ -18,7 +19,6 @@ function Portfolio(props) {
     return (
     <Wrapper>
         <Header />
-        <div>Portfolio: work in progress...</div>
         <Page>
             <Row>
                 <Link to="/DreamScore" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></Link>
@@ -27,8 +27,8 @@ function Portfolio(props) {
             </Row>
             <Row>
                 <a href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {github}><Text>Writing</Text></SquareNav></a>
-                <Link to="/about" exact><SquareNav img = {graffitti}><Text>Grafftti the Internet</Text></SquareNav></Link>
-                <a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" target="_blank"><SquareNav img = {resume}><Text>Processing Art</Text></SquareNav></a>
+                <Link to="/about" exact><SquareNav img = {graffitti}><Text>Graffitti the Internet</Text></SquareNav></Link>
+                <Link to="/Processing%20Sketches"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></Link>
             </Row>
         </Page>
         <Switch>

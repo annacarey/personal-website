@@ -19,7 +19,7 @@ function App() {
         {projectInfo.map(project => {
                 const slug = project.name
                 console.log(slug)
-                return <Route exact path = {`/${slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
+                return <Route key={project.id} exact path = {`/${slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
             })}
       </Switch>
     </Wrapper>

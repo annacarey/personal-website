@@ -11,18 +11,19 @@ function PortfolioItem(props) {
         <Wrapper>
             <Header />
             <Page>
-                <HeroImage position={project.image.position} imageURL= {project.image.imageURL}></HeroImage>
+                <HeroImage href={project.websiteURL} target="_blank" position={project.image.position} imageURL= {project.image.imageURL}></HeroImage>
                 <MainInfo>
                     <Introduction>
                         <TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name.toUpperCase()}</Title></TitleContainer>
                         <P>{project.longDescription}</P>
+                        {project.demoVideo === ""? "" :
                         <VideoContainer>
                             <Iframe url={project.demoVideo}
                                 width="100%"
                                 height= '100%'
                                 position='absolute'
                                 />
-                        </VideoContainer>
+                        </VideoContainer>}
                     </Introduction>
                     <InfoBox>
                         <Table>
@@ -71,6 +72,7 @@ const TR = styled.tr`
 
 const TD =styled.td`
     padding: 4px;
+    vertical-align: top;
 `
 
 const TDVal =styled.td`
@@ -97,7 +99,7 @@ const Page = styled.div`
 `
 
 
-const HeroImage = styled.div`
+const HeroImage = styled.a`
     display: flex;
     height: 50vh;
     width: 100%;
@@ -105,16 +107,21 @@ const HeroImage = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: ${props => props.position };
+    @media (max-width: 400px) {
+        background-position: center;
+    }
 `
 const MainInfo = styled.div`
     display: flex;
-    // flex-wrap: wrap;
     padding-bottom: 5%;
     box-sizing: content-box;
     @media (max-width: 400px) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    @media (max-width: 620px) {
+        flex-wrap: wrap;
     }
 `
 
@@ -127,6 +134,9 @@ const Introduction = styled.div`
     min-width: 400px;
     padding-top: 3%;
     padding-bottom: 3%;
+    @media (max-width: 400px) {
+        min-width:200px;
+    }
 `
 const VideoContainer = styled.div`
     display: flex;
@@ -136,18 +146,22 @@ const VideoContainer = styled.div`
     padding-bottom: 56.25%;
     position: relative;
     @media (max-width: 400px) {
-        margin-bottom: -3%;
+        margin-bottom: 2%;
     }
 `
 
 const InfoBox = styled.div`
     background-color: #ededed;
-    padding: 2%;
+    padding: 3%;
     font-size: 12px;
     height: 100%;
     box-sizing: border-box;
     @media (max-width: 400px) {
         width: 86%;
+        padding: 0%;
+    }
+    @media (max-width: 620px) {
+        width: 90%;
     }
 `
 

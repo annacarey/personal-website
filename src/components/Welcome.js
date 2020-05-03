@@ -17,8 +17,8 @@ function Welcome() {
       </MainImageDiv>
       <BottomNav>
           <Row>
-            <Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>Portfolio</Text></SquareNav></Link>
             <Link to="/about" exact><SquareNav img = {about}><Text>About</Text></SquareNav></Link>
+            <Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>Portfolio</Text></SquareNav></Link>
           </Row>
           <Row>
             <a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" target="_blank"><SquareNav img = {resume}><Text>Resume</Text></SquareNav></a>
@@ -85,7 +85,7 @@ const SquareNav = styled.div`
       margin-top: 1.5%;
     }
     &:before {
-      opacity: 0.7;
+      opacity: 0.5;
       background-image: ${props => `url(${props.img})`} ;
       background-repeat: no-repeat;
       background-size: cover;
@@ -106,7 +106,7 @@ const SquareNav = styled.div`
 
 const MainImageDiv = styled.div`
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +120,7 @@ const MainImageDiv = styled.div`
     background-position: center;
     content: "";
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     z-index: 1;
     position: absolute;
 
