@@ -29,7 +29,7 @@ function Portfolio(props) {
             <Row>
                 <StyledA href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {resume}><Text>Writing</Text></SquareNav></StyledA>
                 <StyledLink to="/annajcarey" exact><SquareNav img = {jamesturrell}><Text>This Website!</Text></SquareNav></StyledLink>
-                <StyledLink to="/graffiti" exact><SquareNav img = {graffitti}><Text>Graffitti the Internet</Text></SquareNav></StyledLink>
+                <StyledLink to="/graffiti" exact><SquareNav img = {graffitti}><Text>Graffiti the Internet</Text></SquareNav></StyledLink>
             </Row>
             <Row>
                 <StyledLink to="/processing"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
