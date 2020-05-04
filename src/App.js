@@ -17,9 +17,7 @@ function App() {
         <Route exact path='/portfolio' component={Portfolio}></Route>
         <Route exact path='/about' component={About}></Route>
         {projectInfo.map(project => {
-                const slug = project.name
-                console.log(slug)
-                return <Route key={project.id} exact path = {`/${slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
+                return <Route key={project.id} exact path = {`/${project.slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
             })}
       </Switch>
     </Wrapper>

@@ -1,6 +1,7 @@
 const projectInfo = [
 
     { id: 1,
+    slug: "dreamscore",
     name: "DreamScore",
     shortDescription: "Your personal dream journal that reflects the mood beneath your subconscious",
     websiteURL: "https://www.mydreamscores.co/",
@@ -18,6 +19,7 @@ const projectInfo = [
     }
 },
     {id:2,
+    slug: "painterly",
     name: "Painterly",
     shortDescription: "Your personal dream journal that reflects the mood beneath your subconscious",
     websiteURL: "https://painterly-app.herokuapp.com/",
@@ -35,6 +37,7 @@ const projectInfo = [
     }
 },
     {id: 3,
+    slug: "bestie",
     name: "Bestie",
     shortDescription: "Bestie, the Friend CRM, helps you stay in touch with the closest people in your life",
     websiteURL: "https://bestie-app.herokuapp.com/",
@@ -52,8 +55,9 @@ const projectInfo = [
     }
 },
 {id: 3,
+    slug: "processing",
     name: "Processing Sketches",
-    shortDescription: "Blurring the lines between programming and art making with Processing software.",
+    shortDescription: "Blurring the lines between programming and art making with Processing software",
     websiteURL: "https://processing.org/",
     longDescription: "One of my first entrypoints to programming was in 2013 when I learned about Processing software in an Arduino course I took in college. I fell in love with Processing because it brought together software and art in a way that made sense to me. I loved writing lines of coding and having them appear visually on the screen.",
     technologies: "Processing, Java",
@@ -68,6 +72,43 @@ const projectInfo = [
         position: "center"
     }
 },
+{id: 4,
+    slug: "graffiti",
+    name: "Graffiti The Internet",
+    shortDescription: "Immersive experience that brings the physical experience of spray painting graffiti into the digital world",
+    websiteURL: "https://annajordancarey.files.wordpress.com/2015/05/mood-tagging-writeup.pdf",
+    longDescription: "Graffiti the Internet began as a project called 'Mood Tagging', a virtual spray painting experience that maps is an immersive live painting installation. Mood Tagging consists of a spray paint can with a Force Sensitive Resistor (FSR) and a thermotropic crystal sheet that senses the user's temperature. When the user presses down on the nozzle, the user's temperature is mapped to his or her mood (like a mood ring) and a Microsoft Kinect records the hand movement, so digital spray paint appears on the screen above. The experience was created using Microsoft Kinect, Arduino, and Processing. The final iteration, 'Graffiti the Internet' is a live outdoor painting installation on a real window. The Microsoft Kinect receives the imagery from the window, so as the user is spray painting, the application processes each pixel of the image, filters out the colors that match the spray paint, and displays those pixels on a webpage. The project was created as part of Gray Area's Creative Coding Immersive during my fellowship in the Summer of 2015.",
+    technologies: "Microsoft Kinect, Processing, Java, Arduino, Sensors",
+    github: {
+        main: "",
+        frontend: "",
+        backend: "",
+    },
+    demoVideo: "https://www.youtube.com/embed/Vuim43TKKg4",
+    image: {
+        imageURL: "http://img.youtube.com/vi/Vuim43TKKg4/0.jpg",
+        position: "center"
+    }
+},
+{id: 5,
+    slug: "annajcarey",
+    name: "Personal Website",
+    shortDescription: "My website built from scratch",
+    websiteURL: "https://www.annajcarey.com",
+    longDescription: "When it was time to develop my website to showcase my experience and projects, I was excited to flex my programming skills to create a site that reflected my philosophy for both visual and code design: Make something beautiful, simple, and functional. The most interesting part of this project was building out the portfolio functionality. I am storing all of the info about each project in an array of objects, each containing the same kind of data (stored in ProjectInfo.js). I loop through the array and for each project, I create a route dynamically and render the PortfolioItem component, passing the entire project object down as a prop. This makes it seamless for me to add new projects to my portfolio as all I need to do is add a new object to the array in ProjectInfo.js with the appropriate data and then add a new nav box to the /portfolio page with the new link.",
+    technologies: "React, Heroku",
+    github: {
+        main: "https://github.com/annacarey/personal-website",
+        frontend: "",
+        backend: "",
+    },
+    demoVideo: "",
+    image: {
+        imageURL: "https://github.com/annacarey/personal-website/blob/master/src/resources/images/jamesturrell.jpeg?raw=true",
+        position: "center"
+    }
+},
+
 ]
 
 
