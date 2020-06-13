@@ -1,49 +1,48 @@
-import React from 'react';
-import styled from 'styled-components'
-import PortfolioItem from './PortfolioItem'
-import projectInfo from '../resources/ProjectInfo'
-import Header from './Header'
-import github from '../resources/images/github.png'
-import portfolio from '../resources/images/portfolio.jpg'
-import bestie from '../resources/images/bestie.jpg'
-import painterly from '../resources/images/painterly.png'
-import resume from '../resources/images/resume.jpg'
-import processing from '../resources/images/processing.png'
-import graffitti from '../resources/images/graffitti.jpg'
-import jamesturrell from '../resources/images/jamesturrell.jpeg'
+import React from "react"
+import styled from "styled-components"
+import PortfolioItem from "./PortfolioItem"
+import projectInfo from "../resources/ProjectInfo"
+import Header from "./Header"
+import portfolio from "../resources/images/portfolio.jpg"
+import bestie from "../resources/images/bestie.jpg"
+import painterly from "../resources/images/painterly.png"
+import resume from "../resources/images/resume.jpg"
+import processing from "../resources/images/processing.png"
+import graffitti from "../resources/images/graffitti.jpg"
+import jamesturrell from "../resources/images/jamesturrell.jpeg"
 
-import {NavLink, Link, Switch, Route} from "react-router-dom";
+import {Link, Switch, Route} from "react-router-dom"
 
 
-function Portfolio(props) {
+function Portfolio() {
 
-    return (
-    <Wrapper>
-        <Header />
-        <Page>
-            <Row>
-                <StyledLink to="/dreamscore" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></StyledLink>
-                <StyledLink to="/painterly" exact><SquareNav img = {painterly}><Text>Painterly</Text></SquareNav></StyledLink>
-                <StyledLink to="/bestie" exact><SquareNav img = {bestie}><Text>Bestie</Text></SquareNav></StyledLink>
-            </Row>
-            <Row>
-                <StyledA href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {resume}><Text>Writing</Text></SquareNav></StyledA>
-                <StyledLink to="/annajcarey" exact><SquareNav img = {jamesturrell}><Text>This Website!</Text></SquareNav></StyledLink>
-                <StyledLink to="/graffiti" exact><SquareNav img = {graffitti}><Text>Graffiti the Internet</Text></SquareNav></StyledLink>
-            </Row>
-            <Row>
-                <StyledLink to="/processing"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
-            </Row>
-        </Page>
-        <Switch>
-            {projectInfo.map(project => {
-                const slug = project.name
-                console.log(slug)
-                return <Route exact path = {`/${slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
-            })}
-        </Switch>
-    </Wrapper>
-    )
+	return (
+		<Wrapper>
+			<Header />
+			<Page>
+				<Row>
+					<StyledLink to="/dreamscore" exact><SquareNav img = {portfolio}><Text>DreamScore</Text></SquareNav></StyledLink>
+					<StyledLink to="/painterly" exact><SquareNav img = {painterly}><Text>Painterly</Text></SquareNav></StyledLink>
+					<StyledLink to="/bestie" exact><SquareNav img = {bestie}><Text>Bestie</Text></SquareNav></StyledLink>
+				</Row>
+				<Row>
+					<StyledA href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {resume}><Text>Writing</Text></SquareNav></StyledA>
+					<StyledLink to="/annajcarey" exact><SquareNav img = {jamesturrell}><Text>This Website!</Text></SquareNav></StyledLink>
+					<StyledLink to="/graffiti" exact><SquareNav img = {graffitti}><Text>Graffiti the Internet</Text></SquareNav></StyledLink>
+				</Row>
+				<Row>
+					<StyledLink to="/processing"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
+				</Row>
+			</Page>
+			<Switch>
+				{projectInfo.map(project => {
+					const slug = project.name
+					console.log(slug)
+					return <Route key={project.id} exact path = {`/${slug}`} render={ (props) =><PortfolioItem {...props} project={project} />} />
+				})}
+			</Switch>
+		</Wrapper>
+	)
 }
 
 export default Portfolio

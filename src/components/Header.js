@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'styled-components'
-import {NavLink, Link} from "react-router-dom";
+import React from "react"
+import styled from "styled-components"
+import {Link} from "react-router-dom"
 
-function Header(props) {
+function Header() {
 
-    return (
-        <HeaderWrapper>
-            <Link to="/" exact><HeaderText>ANNA CAREY</HeaderText></Link>
-            <Link to="/" exact><Subheader>Software Engineer</Subheader></Link>
-        </HeaderWrapper>
+	return (
+		<HeaderWrapper>
+			<Link to="/" exact><HeaderText>ANNA CAREY</HeaderText></Link>
+			<Link to="/" exact><Subheader>Software Engineer</Subheader></Link>
+		</HeaderWrapper>
       
-    )
+	)
 }
 
 export default Header

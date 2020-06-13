@@ -1,33 +1,32 @@
-import React from 'react';
-import styled from 'styled-components'
-import headshot from '../resources/images/headshot.jpeg'
-import headshot2 from '../resources/images/headshot2.jpg'
-import Header from './Header'
+import React from "react"
+import styled from "styled-components"
+import headshot2 from "../resources/images/headshot2.jpg"
+import Header from "./Header"
 
-function About(props) {
+function About() {
 
-    return (
-    <Wrapper>
-        <Header />
-        <Page>
-            <AboutSection>
-                <ImageDiv> <Img src={headshot2}/></ImageDiv>
-                <AboutText>
-                    <Greeting>ANNA CAREY</Greeting>
-                    <br />
-                    I'm a full-stack software engineer with a background in communications and art. 
-                    <br /> <br />
-                    Software has the power to solve real world problems, so I'm looking to join a team of builders who are tackling something big.
-                    <br /> <br />
+	return (
+		<Wrapper>
+			<Header />
+			<Page>
+				<AboutSection>
+					<ImageDiv> <Img src={headshot2}/></ImageDiv>
+					<AboutText>
+						<Greeting>ANNA CAREY</Greeting>
+						<br />
+                    I&lsquo;m a full-stack software engineer with a background in communications and art. 
+						<br /> <br />
+                    Software has the power to solve real world problems, so I&lsquo;m looking to join a team of builders who are tackling something big.
+						<br /> <br />
                     My programming experience includes JavaScript, React, Ruby, Rails, Redux, SQL, Sinatra, ActiveRecord, Git, HTML, CSS, and APIs such as Twilio, Google Natural Language Processing, and Google Geocoding.
-                    <br /> <br />
-                    <Email>Let's build something together! <br /> <a href="mailto:anna@annajcarey.com">anna@annajcarey.com</a>
-    </Email>
-                </AboutText>
-            </AboutSection>
-            <QuoteWrapper><Quote>"To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote></QuoteWrapper>
-        </Page>
-        {/* <Page>
+						<br /> <br />
+						<Email>Let&lsquo;s build something together! <br /> <a href="mailto:anna@annajcarey.com">anna@annajcarey.com</a>
+						</Email>
+					</AboutText>
+				</AboutSection>
+				<QuoteWrapper><Quote>&ldquo;To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else.&ldquo;<br/> <By>- Leonardo DaVinci</By></Quote></QuoteWrapper>
+			</Page>
+			{/* <Page>
         <AboutSection>
             <ImageDiv> <Img src={headshot}/></ImageDiv>
             
@@ -46,8 +45,8 @@ function About(props) {
         </Page>
         <Quote> "To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote> */}
 
-    </Wrapper>
-    )
+		</Wrapper>
+	)
 }
 
 export default About

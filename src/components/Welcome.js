@@ -1,35 +1,35 @@
-import React from 'react';
-import styled from 'styled-components'
-import jamesturrell from '../resources/images/jamesturrell.jpeg'
-import github from '../resources/images/github.png'
-import portfolio from '../resources/images/portfolio.jpg'
-import resume from '../resources/images/resume.jpg'
-import about from '../resources/images/about.jpg'
-import Header from './Header'
-import {NavLink, Link} from "react-router-dom";
+import React from "react"
+import styled from "styled-components"
+import jamesturrell from "../resources/images/jamesturrell.jpeg"
+import github from "../resources/images/github.png"
+import portfolio from "../resources/images/portfolio.jpg"
+import resume from "../resources/images/resume.jpg"
+import about from "../resources/images/about.jpg"
+import Header from "./Header"
+import {Link} from "react-router-dom"
 
 function Welcome() {
-  return (
-    <Wrapper>
-      <Header />
-      <MainImageDiv>
-        <Tagline>Full-stack software engineer at the intersection of technology and art.</Tagline>
-      </MainImageDiv>
-      <BottomNav>
-          <Row>
-            <Link to="/about" exact><SquareNav img = {about}><Text>About</Text></SquareNav></Link>
-            <Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>Portfolio</Text></SquareNav></Link>
-          </Row>
-          <Row>
-            <a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" target="_blank"><SquareNav img = {resume}><Text>Resume</Text></SquareNav></a>
-            <a href="https://github.com/annacarey" target="_blank"><SquareNav img = {github}><Text>Github</Text></SquareNav></a>
-          </Row>
-      </BottomNav>
-    </Wrapper>
-  );
+	return (
+		<Wrapper>
+			<Header />
+			<MainImageDiv>
+				<Tagline>Full-stack software engineer at the intersection of technology and art.</Tagline>
+			</MainImageDiv>
+			<BottomNav>
+				<Row>
+					<Link to="/about" exact><SquareNav img = {about}><Text>About</Text></SquareNav></Link>
+					<Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>Portfolio</Text></SquareNav></Link>
+				</Row>
+				<Row>
+					<a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" rel="noopener noreferrer" target="_blank"><SquareNav img = {resume}><Text>Resume</Text></SquareNav></a>
+					<a href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank"><SquareNav img = {github}><Text>Github</Text></SquareNav></a>
+				</Row>
+			</BottomNav>
+		</Wrapper>
+	)
 }
 
-export default Welcome;
+export default Welcome
 
 const Wrapper = styled.div`
   width: 100%;

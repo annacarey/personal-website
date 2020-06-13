@@ -1,18 +1,18 @@
-import React from 'react';
-import styled from 'styled-components'
-import {NavLink, Link} from "react-router-dom";
+import React from "react"
+import styled from "styled-components"
+import {NavLink} from "react-router-dom"
 
-function MenuBar(props) {
+function MenuBar() {
 
-    return (
-        <Wrapper>
-            <InternalLink to="/about" exact>About</InternalLink>
-            <InternalLink to="/portfolio" exact>Portfolio</InternalLink>
-            <ExternalLink target="_blank" href='https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing'>Resume</ExternalLink>
-            <ExternalLink target="_blank" href='https://github.com/annacarey'>Github</ExternalLink>
-            <ExternalLink target="_blank" href='https://medium.com/@anna_carey'>Writing</ExternalLink>
-      </Wrapper>
-    )
+	return (
+		<Wrapper>
+			<InternalLink to="/about" exact>About</InternalLink>
+			<InternalLink to="/portfolio" exact>Portfolio</InternalLink>
+			<ExternalLink target="_blank" href='https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing'>Resume</ExternalLink>
+			<ExternalLink target="_blank" href='https://github.com/annacarey'>Github</ExternalLink>
+			<ExternalLink target="_blank" href='https://medium.com/@anna_carey'>Writing</ExternalLink>
+		</Wrapper>
+	)
 }
 
 export default MenuBar

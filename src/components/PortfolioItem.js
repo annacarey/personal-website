@@ -1,64 +1,65 @@
-import React from 'react';
-import styled from 'styled-components'
-import Header from './Header'
-import Iframe from 'react-iframe'
+/* eslint-disable react/prop-types */
+import React from "react"
+import styled from "styled-components"
+import Header from "./Header"
+import Iframe from "react-iframe"
 
 function PortfolioItem(props) {
 
-    const project = props.project
+	const project = props.project
 
-    return (
-        <Wrapper>
-            <Header />
-            <Page>
-                <HeroImage href={project.websiteURL} target="_blank" position={project.image.position} imageURL= {project.image.imageURL}></HeroImage>
-                <MainInfo>
-                    <Introduction>
-                        <TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name.toUpperCase()}</Title></TitleContainer>
-                        <P>{project.longDescription}</P>
-                    </Introduction>
-                    <InfoBox>
-                        <Table>
-                            <TR>
-                                <TD><strong>Name:</strong></TD>
-                                <TD>{project.name}</TD>
-                            </TR>
-                            <TR>
-                                <TD><strong>Website:</strong></TD>
-                                <TDVal><A href={project.websiteURL}>{project.websiteURL}</A>
-                                </TDVal>
-                            </TR>
-                            <TR>
-                                <TD><strong>About:</strong></TD>
-                                <TD>{project.shortDescription}</TD>
-                            </TR>
-                            <TR>
-                                <TD><strong>Github:</strong></TD>
-                                <TD>{project.github.main!== "" && <A href={project.github.main}>Repo</A>} 
-                                    {project.github.frontend!== "" && <A href={project.github.frontend}>Frontend</A>} {" "}
-                                    {project.github.backend!== "" && <A href={project.github.backend}>Backend</A>}
-                                </TD>
-                            </TR>
-                            <TR>
-                                <TD><strong>Technologies:</strong></TD>
-                                <TD>{project.technologies}</TD>
-                            </TR>
-                        </Table>
-                    </InfoBox>
-                    {project.demoVideo === ""? "" :
-                        <VideoContainer>
-                            <Iframe url={project.demoVideo}
-                                width="100%"
-                                height= '100%'
-                                position='absolute'
-                                />
-                        </VideoContainer>}
-                </MainInfo>
-            </Page>
+	return (
+		<Wrapper>
+			<Header />
+			<Page>
+				<HeroImage href={project.websiteURL} target="_blank" position={project.image.position} imageURL= {project.image.imageURL}></HeroImage>
+				<MainInfo>
+					<Introduction>
+						<TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name.toUpperCase()}</Title></TitleContainer>
+						<P>{project.longDescription}</P>
+					</Introduction>
+					<InfoBox>
+						<Table>
+							<TR>
+								<TD><strong>Name:</strong></TD>
+								<TD>{project.name}</TD>
+							</TR>
+							<TR>
+								<TD><strong>Website:</strong></TD>
+								<TDVal><A href={project.websiteURL}>{project.websiteURL}</A>
+								</TDVal>
+							</TR>
+							<TR>
+								<TD><strong>About:</strong></TD>
+								<TD>{project.shortDescription}</TD>
+							</TR>
+							<TR>
+								<TD><strong>Github:</strong></TD>
+								<TD>{project.github.main!== "" && <A href={project.github.main}>Repo</A>} 
+									{project.github.frontend!== "" && <A href={project.github.frontend}>Frontend</A>} {" "}
+									{project.github.backend!== "" && <A href={project.github.backend}>Backend</A>}
+								</TD>
+							</TR>
+							<TR>
+								<TD><strong>Technologies:</strong></TD>
+								<TD>{project.technologies}</TD>
+							</TR>
+						</Table>
+					</InfoBox>
+					{project.demoVideo === ""? "" :
+						<VideoContainer>
+							<Iframe url={project.demoVideo}
+								width="100%"
+								height= '100%'
+								position='absolute'
+							/>
+						</VideoContainer>}
+				</MainInfo>
+			</Page>
             
-        </Wrapper>
+		</Wrapper>
       
-    )
+	)
 }
 
 export default PortfolioItem
