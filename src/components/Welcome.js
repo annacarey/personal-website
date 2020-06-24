@@ -123,7 +123,6 @@ const MainImageDiv = styled.div`
     height: 60vh;
     z-index: 1;
     position: absolute;
-
   }
 `
 const Tagline = styled.h3`
