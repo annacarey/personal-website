@@ -26,25 +26,6 @@ function About() {
 				</AboutSection>
 				<QuoteWrapper><Quote>&ldquo;To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else.&ldquo;<br/> <By>- Leonardo DaVinci</By></Quote></QuoteWrapper>
 			</Page>
-			{/* <Page>
-        <AboutSection>
-            <ImageDiv> <Img src={headshot}/></ImageDiv>
-            
-            <AboutText>
-                <Greeting>Anna Carey</Greeting>
-                I'm a full-stack software engineer with a background in communications and art. 
-                <br /> <br />
-                Software has the power to solve real world problems, so I'm looking to join a team of builders who are tackling something big.
-                <br /> <br />
-                My programming experience includes JavaScript, React, Ruby, Rails, Redux, SQL, Sinatra, ActiveRecord, Git, HTML, CSS, and APIs such as Twilio, Google Natural Language Processing, and Google Geocoding.
-                <br /> <br />
-                <Email>Let's build something together! => <a href="mailto:anna@annajcarey.com">anna@annajcarey.com</a>
-</Email>
-            </AboutText>
-        </AboutSection>
-        </Page>
-        <Quote> "To develop a complete mind: Study the science of art; Study the art of science. Learn how to see. Realize that everything connects to everything else." <br/> <By>- Leonardo DaVinci</By></Quote> */}
-
 		</Wrapper>
 	)
 }

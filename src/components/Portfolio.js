@@ -10,6 +10,7 @@ import resume from "../resources/images/resume.jpg"
 import processing from "../resources/images/processing.png"
 import graffitti from "../resources/images/graffitti.jpg"
 import jamesturrell from "../resources/images/jamesturrell.jpeg"
+import stacked from "../resources/images/stacked.jpg"
 
 import {Link, Switch, Route} from "react-router-dom"
 
@@ -32,6 +33,8 @@ function Portfolio() {
 				</Row>
 				<Row>
 					<StyledLink to="/processing"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
+					<StyledLink to="/stackedco"><SquareNav img = {stacked}><Text>Stacked Co</Text></SquareNav></StyledLink>
+
 				</Row>
 			</Page>
 			<Switch>
