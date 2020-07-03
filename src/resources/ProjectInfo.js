@@ -132,15 +132,15 @@ const projectInfo = [
 			imageURL: "https://github.com/annacarey/stacked-co/blob/master/src/images/stacked-screenshot.png?raw=true",
 			position: "center"
 		}
-    }
-    ,
+	}    
+	,
 	{
 		id: 7,
 		slug: "scraper",
 		name: "Scraper Learning",
 		shortDescription: "Learning how to build an internet scraper",
 		websiteURL: "N/A",
-		longDescription: "Exploring different ways of building a scraper using Python, a language I learned in college at UC Berkeley but have not used practically in a recent project until now. The IMDB example was very straightforward because they had consistent classnames. Instagram was much more complicated because they use Flexbox so their classnames are created dynamically. I used XML parsing to access elements, which was a new technique for me.",
+		longDescription: "Exploring different ways of building a scraper using Python, the first programming language I learned in college at UC Berkeley but have not been using recently. The IMDB example was very straightforward because they had consistent classnames. Instagram was much more complicated because they use Flexbox so their classnames are created dynamically. I used XML parsing to access the elements. I ended up creating a command line tool that allows you to input the tag name you want to search. The scraper then looks at the nine posts in the featured section and accumulates the comments into an array. As a next step, I will look at searching the comments for particular phrases like 'am or pm' or days of the week to see if I can determine if they include a schedule.",
 		technologies: "Python",
 		github: {
 			main: "https://github.com/annacarey/scraper-learning",
@@ -149,7 +149,7 @@ const projectInfo = [
 		},
 		demoVideo: "",
 		image: {
-			imageURL: "https://github.com/annacarey/stacked-co/blob/master/src/images/stacked-screenshot.png?raw=true",
+			imageURL: "https://github.com/annacarey/scraper-learning/blob/master/instagram-result.png?raw=true",
 			position: "center"
 		}
 	}
