@@ -119,7 +119,7 @@ const projectInfo = [
 		slug: "stackedco",
 		name: "Stacked Co",
 		shortDescription: "Freelance consulting project for digital marketing agency",
-		websiteURL: "https://www.stackedco.co",
+		websiteURL: "http://www.stackedco.co",
 		longDescription: "Stacked Co. is a digital marketing agency that has worked with clients such as Dior, Hello Fresh, and the Morning Brew. I partnered with the client to come up with wireframes, copy (drawing on my communications background), and images (using Photoshop) to create their website. The website is fully responsive. Media queries was a major learning from this project. I also developed skills in client management including working on a set timeline and incorporating feedback iteratively.",
 		technologies: "React, Heroku",
 		github: {
