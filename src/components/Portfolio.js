@@ -33,9 +33,9 @@ function Portfolio() {
 					<StyledLink to="/graffiti" exact><SquareNav img = {graffitti}><Text>Graffiti the Internet</Text></SquareNav></StyledLink>
 				</Row>
 				<Row>
-					<StyledLink to="/processing"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
 					<StyledLink to="/stackedco"><SquareNav img = {stacked}><Text>Stacked Co</Text></SquareNav></StyledLink>
 					<StyledLink to="/scraper"><SquareNav img = {instagram}><Text>Instagram Scraper</Text></SquareNav></StyledLink>
+					<StyledLink to="/processing"><SquareNav img = {processing}><Text>Processing Art</Text></SquareNav></StyledLink>
 				</Row>
 			</Page>
 			<Switch>
