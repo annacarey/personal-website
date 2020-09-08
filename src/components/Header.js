@@ -27,6 +27,9 @@ const HeaderText = styled.h1`
   margin: 0px;
   text-align: center;
   width: 100%;
+  @media (max-width: 800px) {
+    font-size: 30px;
+  }
 `
 
 const Subheader = styled.p`
@@ -34,4 +37,7 @@ const Subheader = styled.p`
   margin: 0px;
   text-align: center;
   width: 100%;
+  @media (max-width: 800px) {
+    font-size: 25px;
+  }
 `
