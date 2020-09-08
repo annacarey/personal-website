@@ -14,13 +14,13 @@ const About = () => {
 					<AboutText>
 						<Greeting>ANNA CAREY</Greeting>
 						<br />
-                        <P>I&lsquo;m a full-stack software engineer, currently at <A href="https://www.vts.com" rel="noopener noreferrer" target="_blank">VTS</A> building in React and Ruby on Rails. Previously, I was Senior Communications Manager at <A href="https://www.artsy.net" rel="noopener noreferrer" target="_blank">Artsy</A>.</P>
+						<P>I&lsquo;m a full-stack software engineer, currently at <A href='https://www.vts.com' rel='noopener noreferrer' target='_blank'>VTS</A> building in React and Ruby on Rails. Previously, I was Senior Communications Manager at <A href='https://www.artsy.net' rel='noopener noreferrer' target='_blank'>Artsy</A>.</P>
 						<br />
-                        <P>My stack is JavaScript/React/Redux and Ruby/Rails.</P>
+						<P>My stack is JavaScript/React/Redux and Ruby/Rails.</P>
 						<br />
-                        <P>When I'm not coding, I <A href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank">write about tech</A> for Medium's publication OneZero and do all things fitness, indoors and in nature.</P>
-                        <br />
-						<Email>Let&lsquo;s build something together! <br /> <a href="mailto:anna@annajcarey.com">anna@annajcarey.com</a>
+						<P>When I&lsquo;m not coding, I <A href='https://medium.com/@anna_carey' rel='noopener noreferrer' target='_blank'>write about tech</A> for Medium&lsquo;s publication OneZero and do all things fitness, indoors and in nature.</P>
+						<br />
+						<Email>Let&lsquo;s build something together! <br /> <a href='mailto:anna@annajcarey.com'>anna@annajcarey.com</a>
 						</Email>
 					</AboutText>
 				</AboutSection>

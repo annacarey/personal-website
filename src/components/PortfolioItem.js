@@ -1,18 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from "react"
 import styled from "styled-components"
-import Header from "./Header"
 import Iframe from "react-iframe"
+import Header from "./Header"
 
 const PortfolioItem = (props) => {
-
-	const project = props.project
+	const { project } = props
 
 	return (
 		<Wrapper>
 			<Header />
 			<Page>
-				<HeroImage href={project.websiteURL} target="_blank" position={project.image.position} imageURL= {project.image.imageURL}></HeroImage>
+				<HeroImage href={project.websiteURL} target="_blank" position={project.image.position} imageURL={project.image.imageURL} />
 				<MainInfo>
 					<Introduction>
 						<TitleContainer href={project.websiteURL} target="_blank"><Title>{project.name.toUpperCase()}</Title></TitleContainer>
@@ -26,7 +25,8 @@ const PortfolioItem = (props) => {
 							</TR>
 							<TR>
 								<TD><strong>Website:</strong></TD>
-								<TDVal><A href={project.websiteURL}>{project.websiteURL}</A>
+								<TDVal>
+									<A href={project.websiteURL}>{project.websiteURL}</A>
 								</TDVal>
 							</TR>
 							<TR>
@@ -35,9 +35,12 @@ const PortfolioItem = (props) => {
 							</TR>
 							<TR>
 								<TD><strong>Github:</strong></TD>
-								<TD>{project.github.main!== "" && <A href={project.github.main}>Repo</A>} 
-									{project.github.frontend!== "" && <A href={project.github.frontend}>Frontend</A>} {" "}
-									{project.github.backend!== "" && <A href={project.github.backend}>Backend</A>}
+								<TD>
+									{project.github.main !== "" && <A href={project.github.main}>Repo</A>}
+									{project.github.frontend !== "" && <A href={project.github.frontend}>Frontend</A>}
+									{" "}
+									{" "}
+									{project.github.backend !== "" && <A href={project.github.backend}>Backend</A>}
 								</TD>
 							</TR>
 							<TR>
@@ -46,19 +49,21 @@ const PortfolioItem = (props) => {
 							</TR>
 						</Table>
 					</InfoBox>
-					{project.demoVideo === ""? "" :
+					{project.demoVideo === "" ? "" : (
 						<VideoContainer>
-							<Iframe url={project.demoVideo}
+							<Iframe
+								url={project.demoVideo}
 								width="100%"
-								height= '100%'
-								position='absolute'
+								height="100%"
+								position="absolute"
 							/>
-						</VideoContainer>}
+						</VideoContainer>
+					)}
 				</MainInfo>
 			</Page>
-            
+
 		</Wrapper>
-      
+
 	)
 }
 
@@ -70,12 +75,12 @@ const TR = styled.tr`
     vertical-align: top;
 `
 
-const TD =styled.td`
+const TD = styled.td`
     padding: 4px;
     vertical-align: top;
 `
 
-const TDVal =styled.td`
+const TDVal = styled.td`
     word-break: break-all;
 `
 
@@ -102,10 +107,10 @@ const HeroImage = styled.a`
     display: flex;
     height: 60vh;
     width: 100%;
-    background-image: ${props => `url(${props.imageURL})`};
+    background-image: ${(props) => `url(${props.imageURL})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: ${props => props.position };
+    background-position: ${(props) => props.position};
     @media (max-width: 400px) {
         background-position: center;
     }

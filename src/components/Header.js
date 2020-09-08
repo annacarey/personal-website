@@ -5,16 +5,16 @@ import {Link} from "react-router-dom"
 const Header = () => {
 
 	return (
-    <Wrapper>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/portfolio">Portfolio</StyledLink>
-      <HeaderWrapper>
-        <Link to="/" exact><HeaderText>ANNA CAREY</HeaderText></Link>
-        <Link to="/" exact><Subheader>Software Engineer</Subheader></Link>
-      </HeaderWrapper>
-      <StyledA href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank">Github</StyledA>
-      <StyledA href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank">Writing</StyledA>
-    </Wrapper>
+		<Wrapper>
+			<StyledLink to="/about">About</StyledLink>
+			<StyledLink to="/portfolio">Portfolio</StyledLink>
+			<HeaderWrapper>
+				<Link to="/" exact><HeaderText>ANNA CAREY</HeaderText></Link>
+				<Link to="/" exact><Subheader>Software Engineer</Subheader></Link>
+			</HeaderWrapper>
+			<StyledA href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank">Github</StyledA>
+			<StyledA href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank">Writing</StyledA>
+		</Wrapper>
 	)
 }
 

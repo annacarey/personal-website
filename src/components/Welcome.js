@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import jamesturrell from "../resources/images/jamesturrell.jpeg"
 import github from "../resources/images/github.png"
 import portfolio from "../resources/images/portfolio.jpg"
@@ -7,29 +8,26 @@ import resume from "../resources/images/resume.jpg"
 import about from "../resources/images/about.jpg"
 import writing from "../resources/images/writing.jpg"
 import Header from "./Header"
-import {Link} from "react-router-dom"
 
-const Welcome = () => {
-	return (
-		<Wrapper>
-			<Header />
-			<MainImageDiv>
-				<Tagline>Full-stack software engineer at the intersection of technology and art.</Tagline>
-			</MainImageDiv>
-			<BottomNav>
-				<Row>
-					<Link to="/about" exact><SquareNav img = {about}><Text>About</Text></SquareNav></Link>
-					<Link to="/portfolio" exact><SquareNav img = {portfolio}><Text>Portfolio</Text></SquareNav></Link>
-				</Row>
-				<Row>
-					<a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" rel="noopener noreferrer" target="_blank"><SquareNav img = {resume}><Text>Resume</Text></SquareNav></a>
-					<a href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank"><SquareNav img = {github}><Text>Github</Text></SquareNav></a>
-				</Row>
-          <a href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank"><SquareNav writing={true} img = {writing}><Text>Writing</Text></SquareNav></a>
-			</BottomNav>
-		</Wrapper>
-	)
-}
+const Welcome = () => (
+	<Wrapper>
+		<Header />
+		<MainImageDiv>
+			<Tagline>Full-stack software engineer at the intersection of technology and art.</Tagline>
+		</MainImageDiv>
+		<BottomNav>
+			<Row>
+				<Link to="/about" exact><SquareNav img={about}><Text>About</Text></SquareNav></Link>
+				<Link to="/portfolio" exact><SquareNav img={portfolio}><Text>Portfolio</Text></SquareNav></Link>
+			</Row>
+			<Row>
+				<a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" rel="noopener noreferrer" target="_blank"><SquareNav img={resume}><Text>Resume</Text></SquareNav></a>
+				<a href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank"><SquareNav img={github}><Text>Github</Text></SquareNav></a>
+			</Row>
+			<a href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank"><SquareNav writing img={writing}><Text>Writing</Text></SquareNav></a>
+		</BottomNav>
+	</Wrapper>
+)
 
 export default Welcome
 
@@ -83,7 +81,7 @@ const SquareNav = styled.div`
     height: 25vw;
     width: 25vw;
     cursor: pointer;
-    display: ${props => props.writing? 'none' : 'flex'} ;
+    display: ${(props) => (props.writing ? "none" : "flex")} ;
     background-color: black;
     z-index: -1;
     align-items: center;
@@ -104,7 +102,7 @@ const SquareNav = styled.div`
     }
     &:before {
       opacity: 0.5;
-      background-image: ${props => `url(${props.img})`} ;
+      background-image: ${(props) => `url(${props.img})`} ;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -128,8 +126,6 @@ const SquareNav = styled.div`
       opacity: 0.8;
     }
 `
-
-
 
 const MainImageDiv = styled.div`
   width: 100%;
