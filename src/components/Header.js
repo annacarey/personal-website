@@ -5,31 +5,33 @@ import {Link} from "react-router-dom"
 const Header = () => {
 
 	return (
-		<HeaderWrapper>
-			<Link to="/" exact><HeaderText>ANNA CAREY</HeaderText></Link>
-			<Link to="/" exact><Subheader>Software Engineer</Subheader></Link>
-		</HeaderWrapper>
-      
+    <Wrapper>
+      <StyledLink to="/about">About</StyledLink>
+      <StyledLink to="/portfolio">Portfolio</StyledLink>
+      <HeaderWrapper>
+        <Link to="/" exact><HeaderText>ANNA CAREY</HeaderText></Link>
+        <Link to="/" exact><Subheader>Software Engineer</Subheader></Link>
+      </HeaderWrapper>
+      <StyledA href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank">Github</StyledA>
+      <StyledA href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank">Writing</StyledA>
+    </Wrapper>
 	)
 }
 
 export default Header
 
-const HeaderWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   height: 20vh;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `
+
 const HeaderText = styled.h1`
   font-size: 20px;
   margin: 0px;
   text-align: center;
   width: 100%;
-  @media (max-width: 800px) {
-    font-size: 30px;
-  }
 `
 
 const Subheader = styled.p`
@@ -37,7 +39,60 @@ const Subheader = styled.p`
   margin: 0px;
   text-align: center;
   width: 100%;
-  @media (max-width: 800px) {
-    font-size: 25px;
+`
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: none;
+  padding: 30px;
+  min-width: 140px;
+  &:hover ${HeaderText} {
+    color: #696969
+  };
+  &:hover ${Subheader} {
+    color: #696969
+  }
+  @media (max-width: 700px) {
+    padding: 14px;
+  }
+  @media (max-width: 500px) {
+    padding: 10px;
+  }
+`
+
+const StyledLink = styled(Link)`
+  padding: 30px;
+  font-size: 15px;
+  &:hover {
+    color: #696969
+  }
+  @media (max-width: 700px) {
+    padding: 14px;
+  }
+  @media (max-width: 500px) {
+    padding: 10px;
+  }
+  @media (max-width: 450px) {
+    display: none;
+  }
+`
+
+const StyledA = styled.a`
+  padding: 30px;
+  font-size: 15px;
+  &:hover {
+    color: #696969
+  }
+  @media (max-width: 700px) {
+    padding: 14px;
+  }
+  @media (max-width: 500px) {
+    padding: 10px;
+  }
+  @media (max-width: 450px) {
+    display: none;
   }
 `

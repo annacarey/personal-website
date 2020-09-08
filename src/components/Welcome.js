@@ -124,6 +124,9 @@ const SquareNav = styled.div`
         margin: 0;
       }
     }
+    &:hover&:before {
+      opacity: 0.8;
+    }
 `
 
 
