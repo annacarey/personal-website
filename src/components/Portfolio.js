@@ -16,7 +16,7 @@ import instagram from "../resources/images/instagram.jpg"
 import {Link, Switch, Route} from "react-router-dom"
 
 
-function Portfolio() {
+const Portfolio = () => {
 
 	return (
 		<Wrapper>

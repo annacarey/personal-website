@@ -8,7 +8,7 @@ import about from "../resources/images/about.jpg"
 import Header from "./Header"
 import {Link} from "react-router-dom"
 
-function Welcome() {
+const Welcome = () => {
 	return (
 		<Wrapper>
 			<Header />

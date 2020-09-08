@@ -3,7 +3,7 @@ import styled from "styled-components"
 import headshot2 from "../resources/images/headshot2.jpg"
 import Header from "./Header"
 
-function About() {
+const About = () => {
 
 	return (
 		<Wrapper>
@@ -14,12 +14,12 @@ function About() {
 					<AboutText>
 						<Greeting>ANNA CAREY</Greeting>
 						<br />
-                    I&lsquo;m a full-stack software engineer with a background in communications and art. 
-						<br /> <br />
-                    Software has the power to solve real world problems, so I&lsquo;m looking to join a team of builders who are tackling something big.
-						<br /> <br />
-                    My programming experience includes JavaScript, React, Ruby, Rails, Redux, SQL, Sinatra, ActiveRecord, Git, HTML, CSS, and APIs such as Twilio, Google Natural Language Processing, and Google Geocoding.
-						<br /> <br />
+                        <P>I&lsquo;m a full-stack software engineer, currently at <A href="www.vts.com">VTS</A> building in React and Ruby on Rails. Previously, I was Senior Communications Manager at <A href="www.artsy.net">Artsy</A>.</P>
+						<br />
+                        <P>My stack is JavaScript/React/Redux and Ruby/Rails.</P>
+						<br />
+                        <P>When I'm not coding, I <A href="https://medium.com/@anna_carey">write about tech</A> for Medium's publication OneZero and do all things fitness, indoors and in nature.</P>
+                        <br />
 						<Email>Let&lsquo;s build something together! <br /> <a href="mailto:anna@annajcarey.com">anna@annajcarey.com</a>
 						</Email>
 					</AboutText>
@@ -63,6 +63,11 @@ const Email = styled.h3`
 `
 const Img = styled.img`
     width: 260px;
+`
+
+const A = styled.a`
+    color: #011ad8;
+    text-decoration: underline;
 `
 const AboutText = styled.div`
     font-size: 12px;
@@ -113,4 +118,7 @@ const By = styled.div`
    text-align: right;
    font-size: 15px;
    padding-top: 10px;
+`
+
+const P = styled.div`
 `

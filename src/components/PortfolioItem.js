@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Header from "./Header"
 import Iframe from "react-iframe"
 
-function PortfolioItem(props) {
+const PortfolioItem = (props) => {
 
 	const project = props.project
 

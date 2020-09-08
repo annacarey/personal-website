@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import {Link} from "react-router-dom"
 
-function Header() {
+const Header = () => {
 
 	return (
 		<HeaderWrapper>
@@ -30,8 +30,8 @@ const HeaderText = styled.h1`
 `
 
 const Subheader = styled.p`
-    font-size: 15px;
-    margin: 0px;
-    text-align: center;
-    width: 100%;
+  font-size: 15px;
+  margin: 0px;
+  text-align: center;
+  width: 100%;
 `
