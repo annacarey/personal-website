@@ -10,7 +10,7 @@ const MenuBar = () => {
 			<InternalLink to="/portfolio" exact>Portfolio</InternalLink>
 			<ExternalLink target="_blank" href='https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing'>Resume</ExternalLink>
 			<ExternalLink target="_blank" href='https://github.com/annacarey'>Github</ExternalLink>
-			<ExternalLink target="_blank" href='https://medium.com/@anna_carey'>Writing</ExternalLink>
+			<ExternalLink target="_blank" href='https://anna-carey.medium.com/'>Writing</ExternalLink>
 		</Wrapper>
 	)
 }

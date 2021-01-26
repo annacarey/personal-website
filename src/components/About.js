@@ -18,7 +18,7 @@ const About = () => {
 						<br />
 						<P>My stack is JavaScript/React/Redux and Ruby/Rails.</P>
 						<br />
-						<P>When I&lsquo;m not coding, I <A href='https://medium.com/@anna_carey' rel='noopener noreferrer' target='_blank'>write about tech</A> for Medium&lsquo;s publication OneZero and do all things fitness, indoors and in nature.</P>
+						<P>When I&lsquo;m not coding, I <A href='https://anna-carey.medium.com/' rel='noopener noreferrer' target='_blank'>write about tech</A> for Medium&lsquo;s publication OneZero and do all things fitness, indoors and in nature.</P>
 						<br />
 						<Email>Let&lsquo;s build something together! <br /> <a href='mailto:anna@annajcarey.com'>anna@annajcarey.com</a>
 						</Email>

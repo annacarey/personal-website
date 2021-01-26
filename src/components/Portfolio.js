@@ -28,7 +28,7 @@ const Portfolio = () => {
 					<StyledLink to="/bestie" exact><SquareNav img = {bestie}><Text>Bestie</Text></SquareNav></StyledLink>
 				</Row>
 				<Row>
-					<StyledA href="https://medium.com/@anna_carey" target="_blank"><SquareNav img = {writing}><Text>Writing</Text></SquareNav></StyledA>
+					<StyledA href="https://anna-carey.medium.com/" target="_blank"><SquareNav img = {writing}><Text>Writing</Text></SquareNav></StyledA>
 					<StyledLink to="/annajcarey" exact><SquareNav img = {jamesturrell}><Text>This Website!</Text></SquareNav></StyledLink>
 					<StyledLink to="/graffiti" exact><SquareNav img = {graffitti}><Text>Graffiti the Internet</Text></SquareNav></StyledLink>
 				</Row>
