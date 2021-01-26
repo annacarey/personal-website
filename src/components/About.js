@@ -14,11 +14,9 @@ const About = () => {
 					<AboutText>
 						<Greeting>ANNA CAREY</Greeting>
 						<br />
-						<P>I&lsquo;m a full-stack software engineer, currently at <A href='https://www.vts.com' rel='noopener noreferrer' target='_blank'>VTS</A> building in React and Ruby on Rails. Previously, I was Senior Communications Manager at <A href='https://www.artsy.net' rel='noopener noreferrer' target='_blank'>Artsy</A>.</P>
+						<P>I&lsquo;m a full-stack software engineer at <A href='https://www.artsy.net' rel='noopener noreferrer' target='_blank'>Artsy,</A> where I previously led communications. Our stack at Artsy is React and Ruby on Rails.</P>
 						<br />
-						<P>My stack is JavaScript/React/Redux and Ruby/Rails.</P>
-						<br />
-						<P>When I&lsquo;m not coding, I <A href='https://anna-carey.medium.com/' rel='noopener noreferrer' target='_blank'>write about tech</A> for Medium&lsquo;s publication OneZero and do all things fitness, indoors and in nature.</P>
+						<P>When I&lsquo;m not coding, I <A href='https://anna-carey.medium.com/' rel='noopener noreferrer' target='_blank'>write about tech</A> on Medium and spend as much time outside hiking, biking, and snowboarding. I'm currently based in Boulder, CO.</P>
 						<br />
 						<Email>Let&lsquo;s build something together! <br /> <a href='mailto:anna@annajcarey.com'>anna@annajcarey.com</a>
 						</Email>
