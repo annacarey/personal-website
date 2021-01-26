@@ -24,7 +24,7 @@ const Welcome = () => (
 				<a href="https://docs.google.com/document/d/1qjGsgXvPJEEsMYeFVT7GEanE5B5o5LaK10I65qfWLBk/edit?usp=sharing" rel="noopener noreferrer" target="_blank"><SquareNav img={resume}><Text>Resume</Text></SquareNav></a>
 				<a href="https://github.com/annacarey" rel="noopener noreferrer" target="_blank"><SquareNav img={github}><Text>Github</Text></SquareNav></a>
 			</Row>
-			<a href="https://medium.com/@anna_carey" rel="noopener noreferrer" target="_blank"><SquareNav writing img={writing}><Text>Writing</Text></SquareNav></a>
+			<a href="https://anna-carey.medium.com/" rel="noopener noreferrer" target="_blank"><SquareNav writing img={writing}><Text>Writing</Text></SquareNav></a>
 		</BottomNav>
 	</Wrapper>
 )
